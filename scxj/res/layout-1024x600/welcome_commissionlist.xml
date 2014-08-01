@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/welcome_commissionlist"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+    <!-- 计划时间 -->
+    <TextView 
+        android:id="@+id/welcome_plantime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+
+    <!-- 任务项 -->
+     <TextView 
+        android:id="@+id/welcome_task"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="6"/>
+</LinearLayout>

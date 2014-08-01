@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center_vertical"
+    android:gravity="center_vertical" >
+
+    <TextView
+        android:id="@+id/asset_list_item1"
+        style="@style/common_list_title"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="0.3"
+        android:gravity="center"
+        android:paddingRight="20dip"
+        android:text="序号" />
+
+    <TextView
+        android:id="@+id/asset_list_item2"
+        style="@style/common_list_title"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:paddingRight="20dip"
+        android:text="线路名称" />
+
+    <TextView
+        android:id="@+id/asset_list_item3"
+        style="@style/common_list_title"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="20dip"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="起始杆塔——终止杆塔" />
+
+    <TextView
+        android:id="@+id/asset_list_item4"
+        style="@style/common_list_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_weight="0.3"
+        android:gravity="center"
+        android:text="查看地图" />
+
+    <ImageView
+        android:id="@+id/asset_list_item5"
+        android:layout_width="40dip"
+        android:layout_height="40dip"
+        android:layout_gravity="center"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="40dip"
+        android:gravity="center"
+        android:src="@drawable/map"
+        android:visibility="gone" />
+
+</LinearLayout>

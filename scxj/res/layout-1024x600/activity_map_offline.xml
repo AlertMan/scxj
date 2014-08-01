@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+  >
+
+            <Button
+                android:id="@+id/main_zpck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="207dp"
+                android:text="导入离线地图" />
+
+            <Button
+                android:id="@+id/main_tzck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="83dp"
+                android:layout_toLeftOf="@+id/main_zpck"
+                android:text="检查地图数据位置" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:text="离线地图导入说明：\n\n1、请确保把离线地图数据存放在SD卡根目录下" />
+
+</RelativeLayout>

@@ -1,0 +1,159 @@
+<FrameLayout 
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:id="@+id/assetmanager_detailed"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+<ScrollView 
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fadingEdge="none"
+    android:focusableInTouchMode="false"
+    android:overScrollMode="never"
+    android:scrollbars="vertical"
+    android:scrollbarSize="5dp" >
+	<LinearLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:background="@drawable/background"
+	    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textColor="#000"
+            android:paddingTop="20dp"
+            android:paddingBottom="10dp"
+            android:text="设备详细信息"
+            />
+        
+           <LinearLayout
+            	android:id="@+id/assetmanager_detailed01"
+            	android:layout_width="fill_parent"
+            	android:layout_height="wrap_content"
+            	android:background="@drawable/assetmanager_detail_background"
+            	android:padding="20dp"
+            	android:layout_marginLeft="15dp"
+            	android:layout_marginRight="15dp"
+            	android:orientation="vertical" >
+			
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/assetmanager_details"
+                    android:text="设备编号：0529BA1610000000014" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/assetmanager_details"
+                    android:text="设备名称：500kV2号主变500kV向I母侧541317接地开关" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                style="@style/assetmanager_details"
+                android:text="设备位置名称：500kV2号主变500kV向I母侧541317接地开关" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                style="@style/assetmanager_details"
+                android:text="型号规格：500-GRE" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/assetmanager_details"
+                        android:text="生产厂家：日本三菱电机株式会社" />
+
+                     <TextView
+                         android:layout_width="fill_parent"
+                         android:layout_height="wrap_content"
+                         style="@style/assetmanager_details"
+                         android:text="投运日期：05-6-10" />
+ 
+                     <TextView 
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/assetmanager_details"
+                        android:text="施工单位：云南省送变电工程公司"/>
+                     <TextView 
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/assetmanager_details"
+                        android:text="设备管理部门：生产技术部"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView 
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/assetmanager_details"
+                        android:text="电压等级：500kV"/>
+                     <TextView 
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/assetmanager_details"
+                        android:text="出厂日期：04-1-1"/> 
+                     <TextView 
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/assetmanager_details"
+                        android:text="资产管理部门：生产技术部"/>
+                     <TextView 
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/assetmanager_details"
+                        android:text="运行管理班组：500kV大理变电站"/>
+                </LinearLayout>
+            </LinearLayout>
+            <TextView 
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/assetmanager_details"
+                    android:text="运行管理部门：变电管理所"/>
+        </LinearLayout>
+       </LinearLayout> 
+
+    <ExpandableListView 
+        android:id="@+id/assetexpandableListView"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:groupIndicator="@null"/>
+    
+	</LinearLayout>	
+</ScrollView>
+</FrameLayout>

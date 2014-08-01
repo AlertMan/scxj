@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center|center_vertical"
+    android:gravity="center"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/image_polling_row1"
+        style="@style/common_content_forlist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dip"
+        android:layout_weight="0"
+        android:gravity="center"
+        android:text="序号" />
+
+    <TextView
+        android:id="@+id/image_polling_row2"
+        style="@style/common_content_forlist"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="巡视任务"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/image_polling_row3"
+        style="@style/common_content_forlist"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="线路名称" />
+
+    <TextView
+        android:id="@+id/image_polling_row4"
+        style="@style/common_content_forlist"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:layout_weight="1"
+        android:gravity="center|center_vertical"
+        android:text="杆塔号" />
+
+    <ImageView
+        android:id="@+id/image_polling_row5"
+        android:layout_width="44dip"
+        android:layout_height="40dip"
+        android:paddingTop="10dip"
+        android:paddingBottom="10dip"
+        android:layout_weight="0.3"
+         android:gravity="center"
+        android:src="@drawable/bottom_bar_icon_me_normal" />
+
+</LinearLayout>

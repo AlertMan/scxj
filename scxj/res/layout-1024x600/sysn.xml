@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal" >
+
+        <Button
+            android:id="@+id/sysn_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="文件下载" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal" >
+
+        <Button
+            android:id="@+id/sysn_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="文件上传" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <ProgressBar
+            android:id="@+id/sysn_progressBar"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/sysn_progressBar_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/sysn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/common_button_selector"
+            android:layout_marginRight="17dp"
+            android:text="下一步" />
+
+        <Button
+            android:id="@+id/sysn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@+id/sysn_next"
+            android:background="@drawable/common_button_selector"
+            android:text="上一步" />
+
+    </RelativeLayout>
+
+</LinearLayout>

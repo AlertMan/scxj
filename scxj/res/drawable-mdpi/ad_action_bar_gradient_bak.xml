@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <!-- 用于actionbar的颜色渐变，本例是从顶到底颜色逐渐变浅。 -->
+    <gradient
+        android:startColor="@color/honeycombish_blue"
+        android:endColor="@color/background"
+        android:type="linear"
+        android:angle="270" />
+</shape>

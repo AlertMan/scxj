@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <!-- errorrecord 表列 -->
+
+    <View style="@style/maintain_listcoldeveder" />
+
+    <TextView
+        android:id="@+id/defect_item1"
+        style="@style/maintain_listcontent"
+        android:layout_weight="2"
+        android:marqueeRepeatLimit="2" />
+
+    <View style="@style/maintain_listcoldeveder" />
+
+    <TextView
+        android:id="@+id/defect_item2"
+        style="@style/maintain_listcontent"
+        android:layout_weight="2"
+        android:lines="2" />
+
+    <View style="@style/maintain_listcoldeveder" />
+
+    <TextView
+        android:id="@+id/defect_item3"
+        style="@style/maintain_listcontent"
+        android:layout_weight="3"
+        android:lines="2" />
+
+    <View style="@style/maintain_listcoldeveder" />
+
+    <TextView
+        android:id="@+id/defect_item4"
+        style="@style/maintain_listcontent"
+        android:layout_weight="1.5" />
+
+    <View style="@style/maintain_listcoldeveder" />
+
+    <TextView
+        android:id="@+id/defect_item5"
+        style="@style/maintain_listcontent"
+        android:layout_weight="1.5" />
+
+    <View style="@style/maintain_listcoldeveder" />
+
+    <TextView
+        android:id="@+id/defect_item6"
+        style="@style/maintain_listcontent"
+        android:layout_weight="1.5" />
+
+    <View style="@style/maintain_listcoldeveder" />
+
+    <TextView
+        android:id="@+id/defect_item7"
+        style="@style/maintain_listcontent"
+        android:layout_weight="1.5" />
+
+    <View style="@style/maintain_listcoldeveder" />
+
+</LinearLayout>

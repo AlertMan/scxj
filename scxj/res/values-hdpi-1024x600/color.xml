@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="bottom_item_line_color">#111111</color>
+    <color name="title_color_white">#ffffff</color>
+    <color name="title_button_color_gray">#e5e9ec</color>
+    <color name="white">#FFFFFF</color>
+    <color name="gray_white">#ECECEC</color>
+    <color name="list_textColor">#043D67</color>
+    <color name="sys_set_bg_color">#0CDADA</color>
+    <!-- <color name="textcolor">#3A83B8</color> -->
+    <color name="textcolor">#000</color>
+    <color name="darkgray">#938192</color>
+    <color name="lightgreen">#7cd12e</color>
+    <color name="darkBlue">#0C3A67</color>
+    <color name="mainBackground">#f7f7f7</color>
+    <color name="btnBackground">#dcf5fc</color>
+    <color name="itemFontcolor">#3399cc</color>
+    <color name="itemHeadcolor">#002352</color>
+    <color name="defaultFontColor">#013666</color>
+    <color name="lineColor">#06bcf0</color>
+    <color name="mainTextColor">#395587</color>
+    <color name="infoTextColor">#7a899f</color>
+    <color name="gray">#6C6C6C</color>
+    <color name="barColor">#99a8bb</color>
+    <color name="list_bg">#3A83B8</color>
+    <color name="black">#000000</color>
+    <color name="colour_333333">#333333</color>
+  <!-- <color name="colour_98fb98">#98fb98</color> -->
+    <!-- actionBar color -->
+    <color name="android_green">#FFA4C639</color>
+    <color name="honeycombish_blue">#FF58BAED</color>
+    <color name="background">#FFEFEFEF</color>
+    <color name="soft_grey">#FF777777</color>
+    <color name="transparent_background">#80ffffff</color>
+
+</resources>

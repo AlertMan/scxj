@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/list_title0"
+            style="@style/common_content_forlist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_weight="0"
+            android:gravity="center"
+            android:text="序号" />
+
+        <TextView
+            android:id="@+id/list_title1"
+            style="@style/common_content_forlist"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="线路名称" />
+
+        <TextView
+            android:id="@+id/list_title2"
+            style="@style/common_content_forlist"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="杆塔号" />
+
+        <TextView
+            android:id="@+id/list_title3"
+            style="@style/common_content_forlist"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:text="计划完成时间" />
+
+        <TextView
+            android:id="@+id/list_title4"
+            style="@style/common_content_forlist"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:text="下达任务时间" />
+
+        <TextView
+            android:id="@+id/list_title5"
+            style="@style/common_content_forlist"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_weight="0.3"
+            android:gravity="center"
+            android:text="缺陷类别" />
+
+        <TextView
+            android:id="@+id/list_title6"
+            style="@style/common_content_forlist"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_weight="0.3"
+            android:gravity="center"
+            android:text="状态" />
+
+        <ImageView
+            android:id="@+id/list_title7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_weight="0"
+            android:gravity="center"
+            android:src="@drawable/cut" />
+    </LinearLayout>
+
+</LinearLayout>

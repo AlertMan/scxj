@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/photo_relaGrid"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/frameLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/photo_scanImage"
+            android:layout_width="160dp"
+            android:layout_height="110dp"
+            android:background="@drawable/photo_background"
+            android:paddingBottom="2dp"
+            android:paddingLeft="2dp" />
+
+        <Button
+            android:id="@+id/photo_scan_deleteButton"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignRight="@+id/photo_scanImage"
+            android:background="@drawable/photo_grid_item_delete"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/show_pictures_grid_item1"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="middle"
+        android:focusable="true"
+        android:singleLine="true"
+        android:text="照片名称："
+        android:textColor="@color/colour_333333"
+        android:textSize="10sp" />
+
+
+    <TextView
+        android:id="@+id/show_pictures_grid_item7"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="middle"
+        android:focusable="true"
+        android:lines="2"
+        android:singleLine="true"
+        android:text="照片拍摄时间："
+        android:textColor="@color/colour_333333"
+        android:textSize="10sp" />
+
+</LinearLayout>
