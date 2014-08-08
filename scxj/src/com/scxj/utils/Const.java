@@ -45,6 +45,7 @@ public class Const {
 		public static String TRNTASKDEFECTRET = "TRNTASKDEFECTRET.DB";//消缺回传数据库
 		public static String TRNASSET = "TRNASSET.DB";//设备台账
 		public static String TRNCOMMON = "TRNCOMMON.DB";//用户信息
+		public static String TRNPOINT = "TRNPOINT.DB";//绑卡信息
 	
 		/**
 		 * 用户登录后 设置该用户数据目录
@@ -58,6 +59,7 @@ public class Const {
 			TRNTASKDEFECTRET = "TRNTASKDEFECTRET.DB";//消缺回传数据库
 			TRNASSET = "TRNASSET.DB";//设备台账
 			TRNCOMMON = "TRNCOMMON.DB";//用户信息
+			TRNPOINT = "TRNPOINT.DB";//绑卡信息
 			
 			if (userName == null || "".equals(userName)) {
 				return false;
@@ -68,12 +70,15 @@ public class Const {
 				copyFile(TRNTASKDEFECT,DBHelper.DB_PATH,userDir,flag);
 				copyFile(TRNTASKDEFECTRET,DBHelper.DB_PATH,userDir,flag);
 				copyFile(TRNASSET,DBHelper.DB_PATH,userDir,flag);
+				copyFile(TRNPOINT,DBHelper.DB_PATH,userDir,flag);
 				
 				TRNTASK = userName + "/TRNTASK.DB";//任务数据库
 				TRNTASKRET = userName + "/TRNTASKRET.DB";//任务回传数据库
 				TRNTASKDEFECT = userName + "/TRNTASKDEFECT.DB";//消缺数据库
 				TRNTASKDEFECTRET = userName + "/TRNTASKDEFECTRET.DB";//消缺回传数据库
 				TRNASSET = userName + "/TRNASSET.DB";//设备台账
+				TRNPOINT = userName +"/TRNPOINT.DB";//绑卡信息
+				
 				return true;
 			}
 		}

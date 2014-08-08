@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/asset_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ios_background"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/navTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/nav_title_bar" />
+
+    <EditText
+        android:id="@+id/site_edit_search"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/search_edit_bg"
+        android:drawableLeft="@drawable/search"
+        android:drawablePadding="6dip"
+        android:gravity="center_vertical"
+        android:hint="搜索"
+        android:singleLine="true"
+        android:textSize="12sp" />
+
+    <ListView
+        android:id="@+id/list_config_site"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
+        android:layout_marginBottom="20dp" />
+    
+    
+   <Button
+        style="@style/common_button_style"
+        android:layout_gravity="center|bottom"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_big_new_selector"
+        android:gravity="center"
+        android:onClick="uploadPointInfo"
+        android:text="同步绑卡数据" />
+
+</LinearLayout>
