@@ -391,4 +391,23 @@ public class NetAdapter {
 		}
 	}
 
+	/**
+	 * 重新写一个上传ＤＢ库
+	 * @param userId
+	 * @param encode
+	 * @return
+	 */
+	public static String updateBindingInfo(String userId, String encode) {
+		return null;
+	}
+
+	/**
+	 * 下载巡视点
+	 * @param userId
+	 * @return
+	 */
+	public static boolean downloadPointDb(String userId) {
+		return false;
+	}
+
 }

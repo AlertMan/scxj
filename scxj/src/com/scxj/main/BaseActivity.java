@@ -24,6 +24,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.scxj.R;
 import com.scxj.utils.Const;
@@ -160,7 +161,7 @@ public class BaseActivity extends FragmentActivity {
 	 * 设置标题栏
 	 * 
 	 * @param navTitle
-	 *//*
+	 */
 	protected void setNavTitleBar(String navTitle, boolean showBackButton) {
 		if (findViewById(R.id.navTitleBar) != null && navTitle != null) {
 			ImageButton navBackButton = (ImageButton) findViewById(R.id.navBackButton);
@@ -180,8 +181,7 @@ public class BaseActivity extends FragmentActivity {
 			setting.setOnClickListener(new OnClickListener() {
 				@Override
 				public void onClick(View v) {
-					Intent intent=new Intent(context, SettingActivity.class);
-					startActivity(intent);
+					Toast.makeText(context, "点击了一下",0).show();
 				}
 			});
 
@@ -191,6 +191,6 @@ public class BaseActivity extends FragmentActivity {
 
 	protected void setNavTitleBar(String navTitle) {
 		setNavTitleBar(navTitle, true);
-	}*/
+	}
 	
 }

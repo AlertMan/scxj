@@ -38,7 +38,7 @@ public class PointListAdapter extends ListAdapter {
 	 * @see android.widget.Adapter#getView(int, android.view.View, android.view.ViewGroup)
 	 */
 	@Override
-	public View getView(final int position, View convertView, ViewGroup arg2) {
+	public View getView(final int position, View convertView, ViewGroup arg2) {/*
 		ViewHolder vh = null;
 		if (convertView == null) {
 			convertView = mInflater.inflate(R.layout.standard_item, null);
@@ -110,16 +110,11 @@ public class PointListAdapter extends ListAdapter {
 			}
 		});
 		return convertView;
+	*/
+		return null;
 	}
 
-	public List<TB_TASK_POINT_ASSET> getAssets() {
-		return assets;
-	}
-
-	public void setAssets(List<TB_TASK_POINT_ASSET> assets) {
-		this.assets = assets;
-	}
-
+ 
 	static class ViewHolder{
 		public TextView tv01;
 		public TextView tv02;

@@ -27,21 +27,27 @@ import android.widget.Toast;
 import cn.pisoft.base.db.DBHelper;
 
 import com.cetc7.UHFReader.UHFReaderClass.OnEPCsListener;
+import com.scxj.MyApplication;
 import com.scxj.R;
-import com.scxj.adapter.StandardListAdapter;
+import com.scxj.adapter.PointListAdapter;
 import com.scxj.dao.PonitDao;
 import com.scxj.model.TB_POINT;
+import com.scxj.utils.FileUtil;
+import com.scxj.utils.RfidTools;
+import com.scxj.utils.StringUtils;
+import com.scxj.utils.net.Base64;
+import com.scxj.utils.usb.NetAdapter;
 
 /**
  * 绑卡主界面
- * 
+ * 下载绑卡数据，绑卡与任务操作是独立的
  */
 public class BindCardActivity extends BaseActivity implements OnEPCsListener {
 	private boolean mAllive;
 	private boolean mForceDisconnect;
 	private ListView siteListView;
-	private List<TB_TASK_STANDARD> datas;
-	private StandardListAdapter adapter;
+	private List<TB_POINT> datas;
+	private PointListAdapter adapter;
 	private ArrayList<HashMap<String, String>> mSiteList;
 	public EditText siteEditText;
 	private List<TB_POINT> sitesSrc;
@@ -100,7 +106,7 @@ public class BindCardActivity extends BaseActivity implements OnEPCsListener {
 											int whichButton) {
 										currentSite.setEPCCODE(tagId);
 										pointDao.bindingCard(currentSite);
-										TB_TASK_POINT point = pointDao.getPointById(currentSiteId);
+										TB_POINT point = pointDao.getPointById(currentSiteId);
 										point.setEPCCODE("");
 										pointDao.bindingCard(point);
 										 
@@ -285,7 +291,7 @@ public class BindCardActivity extends BaseActivity implements OnEPCsListener {
 		handler.obtainMessage(MSG_SHOW_TOAST, "开始扫描").sendToTarget();
 	}
 
-	private void onSiteBindingSuccess(TB_TASK_POINT site) {
+	private void onSiteBindingSuccess(TB_POINT site) {
 		for (HashMap<String, String> map : mSiteList) {
 			String siteId = map.get("id");
 			if (siteId != null && siteId.equalsIgnoreCase(site.getPOINTID())) {
@@ -329,7 +335,7 @@ public class BindCardActivity extends BaseActivity implements OnEPCsListener {
 		}
 
 		if (sitesSrc != null && sitesSrc.size() > 0) {
-			List<TB_TASK_POINT> tempUserList = new ArrayList<TB_TASK_POINT>();
+			List<TB_POINT> tempUserList = new ArrayList<TB_POINT>();
 			for (int i = 0; i < sitesSrc.size(); i++) {
 
 				System.out.println(sitesSrc.get(i).getPOINTNAME() + "|||"
@@ -346,9 +352,9 @@ public class BindCardActivity extends BaseActivity implements OnEPCsListener {
 
 	}
 
-	private void initSiteData(List<TB_TASK_POINT> siteData) {
+	private void initSiteData(List<TB_POINT> siteData) {
 		mSiteList.clear();
-		for (TB_TASK_POINT site : siteData) {
+		for (TB_POINT site : siteData) {
 			HashMap<String, String> item = new HashMap<String, String>();
 			item.put("name", site.getPOINTNAME());
 			item.put("info", site.getSTATUS()+"--"+site.getEPCCODE());
