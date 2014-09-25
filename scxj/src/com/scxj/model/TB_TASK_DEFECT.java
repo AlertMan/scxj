@@ -34,7 +34,7 @@ public class TB_TASK_DEFECT implements Serializable {
 	private String TOWERID;//	所属村塔ID	TEXT
 	private String TOWERNAME;//	所属杆塔名称	TEXT
 	private String STATUS;//任务状态
-	
+	private String EPCCODE;
 	
 	public String getSTATUS() {
 		return STATUS;
@@ -64,6 +64,7 @@ public class TB_TASK_DEFECT implements Serializable {
 		LINENAME = "";
 		TOWERID = "";
 		TOWERNAME = "";
+		EPCCODE = "";
 	}
 	public String getDEFECTTASKID() {
 		return DEFECTTASKID;
@@ -186,6 +187,12 @@ public class TB_TASK_DEFECT implements Serializable {
 		TOWERNAME = tOWERNAME;
 	}
 	
+	public String getEPCCODE() {
+		return EPCCODE;
+	}
+	public void setEPCCODE(String ePCCODE) {
+		EPCCODE = ePCCODE;
+	}
 	
 	@Override
 	public boolean equals(Object o) {

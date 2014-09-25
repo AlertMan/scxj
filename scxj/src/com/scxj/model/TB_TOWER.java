@@ -23,6 +23,7 @@ public class TB_TOWER implements Serializable{
 	private String STATUS;//	杆塔状态是否有异常
 	private String RATAINFIELD;//	预留字段
 	private String TASKID;//任务ID
+	private String EPCCODE;
 	
 	private String CHECKDETAIL;//巡检详情
 	
@@ -45,6 +46,7 @@ public class TB_TOWER implements Serializable{
 		RATAINFIELD = "";
 		TASKID  = "";
 		CHECKDETAIL = null;
+		EPCCODE = "";
 	}
 	public String getTASKID() {
 		return TASKID;
@@ -147,6 +149,12 @@ public class TB_TOWER implements Serializable{
 	}
 	public void setCHECKDETAIL(String cHECKDETAIL) {
 		CHECKDETAIL = cHECKDETAIL;
+	}
+	public String getEPCCODE() {
+		return EPCCODE;
+	}
+	public void setEPCCODE(String ePCCODE) {
+		EPCCODE = ePCCODE;
 	}
 	
 	
