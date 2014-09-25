@@ -1,4 +1,6 @@
 plan:
+git地址：
+
 1、巡视点绑卡库 TBPOINT.DB 数据结构详见TB_POINT.java说明 
 2、接口概要需求说明  usb接口修改和webservice接口同步修改
 
