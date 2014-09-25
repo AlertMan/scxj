@@ -316,7 +316,7 @@ public class NetAdapter {
 				}
 				
 			}else{
-				String resultStr = WSUtils.downLoadPatrolPointDB(userName);
+				String resultStr = WSUtils.downloadBindingInfo(userName);
 				if (StringUtils.isNull(resultStr)) {// 服务连接失败
 					//			return "服务连接失败" ;
 					return false;

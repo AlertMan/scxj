@@ -158,8 +158,8 @@ public class WSUtils {
 	 * @param userName
 	 * @return
 	 */
-	public static String downLoadPatrolPointDB(String userName){
-		String methodName = "downloadPointsInfo";
+	public static String downloadBindingInfo(String userName){
+		String methodName = "downloadBindingInfo";
 		Map<String,Object> params = new LinkedHashMap<String,Object>();
 		params.put("userName", userName);
 		SoapObject results = (SoapObject)WSUtils.callWS(nameSpace, methodName, params, wsdl, timeout);
