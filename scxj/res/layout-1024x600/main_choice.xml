@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/background" >
+    
+      <Button
+        android:id="@+id/nav_btn_task"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_above="@+id/midView"
+        android:layout_margin="20dp"
+        android:layout_centerHorizontal="true"
+        android:text="执行任务"
+        android:textColor="@color/white"
+        android:onClick="startToMain"
+        android:textSize="16sp" />
+<View 
+    android:id="@+id/midView"
+	android:layout_width="match_parent"
+	android:layout_height="20dp"
+	android:layout_centerVertical="true"
+	/>
+    <Button
+        android:id="@+id/nav_btn_binding"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/midView"
+        android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        android:text="巡视点绑卡"
+        android:onClick="startToBinding"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+</RelativeLayout>

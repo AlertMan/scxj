@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/task_main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/inspection_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:background="@drawable/top_menu_bg"
+                android:paddingLeft="5dip"
+                android:paddingRight="5dip"
+                android:text="巡检任务" />
+
+            <Button
+                android:id="@+id/defect_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:background="@drawable/top_menu_bg"
+                android:paddingLeft="5dip"
+                android:paddingRight="5dip"
+                android:text="消缺任务" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/list_bg"
+            android:orientation="vertical" >
+
+            <include layout="@layout/task_main_item" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/task_main_lv"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:cacheColorHint="#00000000"
+            android:dividerHeight="0dp"
+            android:fadingEdge="none"
+            android:listSelector="@null"
+            android:layout_weight="1"
+            android:scrollingCache="false" >
+        </ListView>
+
+      
+    </LinearLayout>
+
+    
+  <include layout="@layout/company"/>
+</FrameLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:background="@drawable/main_bg02"
+        android:layout_height="50dp" >
+
+        <ImageButton
+            android:id="@+id/navSetting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/bottom_item_warming_icon" />
+
+        <TextView
+            android:id="@+id/navTitleName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            style="@style/menu_title"
+            android:text="四川省绵阳电业局维检公司差异化巡检系统"
+            />
+
+        <ImageButton
+            android:id="@+id/navBackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView1"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/set_ico" />
+
+    </RelativeLayout>
+
+</LinearLayout>

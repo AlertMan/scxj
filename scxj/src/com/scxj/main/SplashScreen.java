@@ -19,7 +19,7 @@ public class SplashScreen extends BaseActivity {
 		getWindow().addFlags(WindowManager.LayoutParams.FLAG_DITHER);
 
 		setContentView(R.layout.splashscreen);
-
+		
 	}
 
 	@Override

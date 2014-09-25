@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="runningstate">
+        <item>1号主变</item>
+        <item>2号主变</item>
+        <item>3号主变</item>
+    </string-array>
+    
+     <string-array name="title_section">
+        <item>任务管理</item>
+        <item>照片查看</item>
+        <item>台账查看</item>
+        <item>轨迹查看</item>
+        <item>数据同步</item>
+        <item>系统设置</item>
+    </string-array>
+    
+     <string-array name="defectLevel">
+         <item>一般</item>
+         <item>严重</item>
+         <item>危险</item>
+     </string-array>
+</resources>

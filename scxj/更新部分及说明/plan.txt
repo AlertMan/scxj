@@ -1,0 +1,13 @@
+plan:
+1、巡视点绑卡库 TBPOINT.DB 数据结构详见TB_POINT.java说明 
+2、接口概要需求说明  usb接口修改和webservice接口同步修改
+
+	    下载接口名downloadBindingInfo param:userName  接口端判断是否有权限下载
+
+            上传接口名：uploadBindingInfo param:userName , pointFile 接口端更新有修改的字段
+
+//todo author->jack date->07.15
+
+绑卡具体业务操作界面 选择界面 和优化
+//todo author->peter date->07.12
+

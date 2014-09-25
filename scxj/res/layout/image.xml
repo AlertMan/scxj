@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/image_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/inspection_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:background="@drawable/top_menu_bg"
+                android:paddingLeft="5dip"
+                android:paddingRight="5dip"
+                android:text="巡检照片" />
+
+            <Button
+                android:id="@+id/defect_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:background="@drawable/top_menu_bg"
+                android:paddingLeft="5dip"
+                android:paddingRight="5dip"
+                android:text="消缺照片" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:background="@color/list_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/image_list_title1"
+                style="@style/common_list_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_weight="0"
+                android:gravity="center"
+                android:text="序号" />
+
+            <TextView
+                android:id="@+id/image_list_title2"
+                style="@style/common_list_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="任务名称" />
+
+            <TextView
+                android:id="@+id/image_list_title3"
+                style="@style/common_list_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="线路名称" />
+
+            <TextView
+                android:id="@+id/image_list_title4"
+                style="@style/common_list_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="杆塔号" />
+
+            <TextView
+                android:id="@+id/image_list_title5"
+                style="@style/common_list_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:text="照片" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/image_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="#00000000"
+            android:dividerHeight="0dp" >
+        </ListView>
+    </LinearLayout>
+    
+    <include layout="@layout/company"/>
+
+</FrameLayout>

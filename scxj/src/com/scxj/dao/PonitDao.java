@@ -13,43 +13,15 @@ import android.database.Cursor;
 import android.util.Log;
 import cn.pisoft.base.db.DBHelper;
 
-
+/**
+ * 巡视点绑卡
+ * @author Peter
+ *
+ */
 public class PonitDao extends DBHelper {
 
 	public PonitDao(Context context) {
 		super(context);
-	}
-	/**
-	 * 
-	 * @param status
-	 * @return
-	 */
-	public List<TB_POINT> getRiskByTaskId(String id) {
-		List<TB_POINT> list = new ArrayList<TB_POINT>();
-		Cursor cursor = null;
-		try {
-			open(Const.DB_NAME.TRNPOINT);
-			String sql = "select * from TB_POINT where TASKID='"+id+"'";
-			System.out.println("=====sql====="+sql);
-			cursor = rawQuery(sql, null);
-			if (cursor != null) {
-				while (cursor.moveToNext()) {
-					TB_POINT item = (TB_POINT) DBUtil
-							.cursorToObject(cursor, TB_POINT.class);
-
-					list.add(item);
-				}
-
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			if (cursor != null) {
-				cursor.close();
-			}
-			close();
-		}
-		return list;
 	}
 	
 	public TB_POINT getPointById(String id) {

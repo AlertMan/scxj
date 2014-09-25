@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/navTitleBar"
+        android:layout_width="fill_parent"
+        android:layout_height="44dip"
+        layout="@layout/nav_title_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/main_xjxqgl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="巡视消缺管理" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/main_gick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="轨迹查看" />
+
+            <Button
+                android:id="@+id/main_scyxz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="上传与下载" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/main_tzck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="台账查看" />
+
+            <Button
+                android:id="@+id/main_zpck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="照片查看" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

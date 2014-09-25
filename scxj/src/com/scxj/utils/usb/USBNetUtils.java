@@ -202,6 +202,29 @@ public class USBNetUtils {
 		}
 		return results;
 	}
+	/**
+	 * 下载用户绑卡数据库 接口名称downloadPointsInfo
+	 * @param userName
+	 * @return
+	 */
+	public static String downloadBindingInfo(String userName) {
+		String results = "";
+		if(isOnUSBNet()){
+			Map<String, Object> map = new HashMap<String, Object>();
+			map.put("nameSpace", WSUtils.nameSpace);
+			map.put("methodName", "downloadBindingInfo");
+			map.put("wsdl", WSUtils.wsdl);
+			map.put("currTimeOut", "30000");
+			map.put("userName", userName);
+			map.put("status", "0");
+			Object obj = socketListenerThread.callWS(map);
+			if (obj != null) {
+				results = (String) obj;
+			}
+		}
+		return results;
+	}
+	 
 	
 	/**
 	 * 下载用户信息库
@@ -425,6 +448,25 @@ public class USBNetUtils {
 		}
 		return returnResult;
 }
+
+	public static String uploadBindingInfo(String userName, String encode) {
+		String results = "";
+		if(isOnUSBNet()){
+			Map<String, Object> map = new HashMap<String, Object>();
+			map.put("nameSpace", WSUtils.nameSpace);
+			map.put("methodName", "uploadAttachInfo");
+			map.put("wsdl", WSUtils.wsdl);
+			map.put("currTimeOut", "30000");
+			map.put("userName", userName);
+			map.put("pointFile", encode);
+			map.put("status", "0");
+			Object obj = socketListenerThread.callWS(map);
+			if (obj != null) {
+				results = (String) obj;
+			}
+		}
+		return results;
+	}
 	
 	
 }

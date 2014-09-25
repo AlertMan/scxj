@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/box1"
+     >
+     <!-- 任务数量 -->
+     <TextView 
+         android:id="@+id/title"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:textSize="20sp"
+         android:gravity="center_vertical|center_horizontal"
+         android:background="@drawable/box1"
+         android:text="你有3条新任务"/>
+     	
+     <!-- 任务列表 -->
+     <!-- -->
+     <ListView 
+         android:id="@+id/taskcontent"
+         android:layout_width="match_parent"
+         android:layout_height="90dp"
+         android:background="@drawable/box1">
+     </ListView>
+     <LinearLayout 
+         android:id="@+id/task_button"
+         android:layout_marginLeft="25dp"
+         android:layout_marginRight="25dp"
+         android:layout_marginTop="10dp"
+         android:layout_marginBottom="10dp"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:orientation="horizontal">
+         <Button android:id="@+id/more"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginRight="5dp"
+             android:layout_marginLeft="200dp"
+             android:text="更多"
+             android:background="#888888"/>
+     </LinearLayout>
+     
+</LinearLayout>

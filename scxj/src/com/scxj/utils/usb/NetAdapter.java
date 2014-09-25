@@ -291,6 +291,51 @@ public class NetAdapter {
 			return false;
 		}
 	}
+	
+	
+	
+	/**
+	 * 巡视点绑卡数据
+	 * @param userName
+	 * @return
+	 */
+	public static boolean downloadBindingInfo(String userName) {
+		try {
+			if(USBNetUtils.isOnUSBNet()){
+				String resultStr =USBNetUtils.downloadBindingInfo(userName);
+				if (StringUtils.isNull(resultStr)) {// 服务连接失败
+				
+					return false;
+				}
+				JSONObject jb = new JSONObject(resultStr);
+				if("0".equals(jb.getString("resultCode"))){
+					String downloadUrl = jb.getString("resultDesc");
+					return USBNetUtils.downloadFileAndSave(downloadUrl,"TRNPOINT.DB",DBHelper.DB_PATH+"/");
+				}else{	//return "服务连接失败";
+					return false;
+				}
+				
+			}else{
+				String resultStr = WSUtils.downLoadPatrolPointDB(userName);
+				if (StringUtils.isNull(resultStr)) {// 服务连接失败
+					//			return "服务连接失败" ;
+					return false;
+				}
+				JSONObject jb = new JSONObject(resultStr);
+				if("0".equals(jb.getString("resultCode"))){
+					String downloadUrl = jb.getString("resultDesc");
+					MyApplication.getInstance().threadFlag = true;
+					return FileUtil.downFile(downloadUrl, DBHelper.DB_PATH+"/"+"TRNPOINT.DB");
+				}else{	//return "服务连接失败";
+					return false;
+				}
+				
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+	}
 
 	/**
 	 * 下载用户信息库
@@ -391,23 +436,13 @@ public class NetAdapter {
 		}
 	}
 
-	/**
-	 * 重新写一个上传ＤＢ库
-	 * @param userId
-	 * @param encode
-	 * @return
-	 */
-	public static String updateBindingInfo(String userId, String encode) {
-		return null;
+	public static String uploadBindingInfo(String userId, String encode) {
+		if(USBNetUtils.isOnUSBNet()){
+			return USBNetUtils.uploadBindingInfo(userId,encode);
+		}else{
+			return WSUtils.uploadBindingInfo(userId,encode);
+		}
 	}
-
-	/**
-	 * 下载巡视点
-	 * @param userId
-	 * @return
-	 */
-	public static boolean downloadPointDb(String userId) {
-		return false;
-	}
+ 
 
 }

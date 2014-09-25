@@ -106,6 +106,11 @@ public class LoginActivity extends BaseActivity implements Callback {
     private String updateFileName = "";
     private String indext=null;
     
+    /**
+     * 测试阶段 设置为true
+     */
+    boolean isNeedBinding = true;
+    
 	private Handler mHandler = new Handler() {
 		public void handleMessage(Message msg) {
 			hideProgressDialog();
@@ -155,7 +160,8 @@ public class LoginActivity extends BaseActivity implements Callback {
 				if (msg.obj != null && !StringUtils.isNull(msg.obj.toString())) {
 					AudioTipsUtils.showMsg(context, msg.obj.toString());
 				}
-				redirectToMainActivity();
+				
+					redirectToMainActivity();
 				break;
 			default:
 				break;
@@ -563,6 +569,8 @@ public class LoginActivity extends BaseActivity implements Callback {
 	
 	// 跳转到登录成功的界面
 	private void redirectToMainActivity() {
+		
+		
 		MyApplication.getInstance().threadFlag = true;
 		TB_USER user = userDao.getUSER(loginUser.getUSERNAME(),
 				loginUser.getPASSWORD());
@@ -573,11 +581,15 @@ public class LoginActivity extends BaseActivity implements Callback {
 		Const.DB_NAME.setUserDirectory(user.getUSERNAME(), false);// 注入数据
 		MyApplication.getInstance().loginUser = user;
 		saveUserToLocal(user);
-
 		Intent intent = new Intent();
-		intent.setClass(LoginActivity.this, MainMenuActivity.class);
-		MyApplication.getInstance().tipsVoicePlayerStop();// 结束语音
+		if(isNeedBinding){
+			intent.setClass(LoginActivity.this, MainChoiceActivity.class);
+		}else{
+			intent.setClass(LoginActivity.this, MainMenuActivity.class);
+		}
 		startActivity(intent);
+		
+		MyApplication.getInstance().tipsVoicePlayerStop();// 结束语音
 		finish();
 	}
 
@@ -718,6 +730,24 @@ public class LoginActivity extends BaseActivity implements Callback {
 					retStr += "\n台账数据更新成功！";
 				} else {
 					retStr += "\n台账数据更新失败！";
+				}
+			}
+			
+			//巡视点绑卡数据 
+			//更新时间:2014-07-09 peter
+			String pointPath = DBHelper.DB_PATH + "/TRNPOINT.DB";
+			File pointFile = new File(pointPath);
+			isNeedBinding = false;
+			if (pointFile.exists()) {
+				Log.w(this.getClass().getName(), "文件已存在，暂时不下载巡视点绑卡数据库!");
+			} else {
+				patrolTask = NetAdapter.downLoadPatrolAssetDB(loginUser
+						.getUSERNAME());
+				if (patrolTask) {
+					retStr += "\n巡视点绑卡数据更新成功！";
+					isNeedBinding = true;
+				} else {
+					retStr += "\n巡视点绑卡数据更新失败！";
 				}
 			}
 

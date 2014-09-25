@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center" >
+
+    <TextView
+        android:id="@+id/list_title1"
+        style="@style/common_list_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.1"
+        android:gravity="center"
+        android:text="编号" />
+
+    <TextView
+        android:id="@+id/list_title2"
+        style="@style/common_list_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.8"
+        android:gravity="center"
+        android:text="轨迹名称" />
+
+    <TextView
+        android:id="@+id/list_title3"
+        style="@style/common_list_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.6"
+        android:gravity="center"
+        android:text="起始点" />
+
+    <TextView
+        android:id="@+id/list_title4"
+        style="@style/common_list_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.6"
+        android:gravity="center"
+        android:text="终止点" />
+
+    <TextView
+        android:id="@+id/list_title6"
+        style="@style/common_list_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.2"
+        android:gravity="center"
+        android:text="地图查看" />
+
+    <ImageView
+        android:id="@+id/list_title5"
+        style="@style/common_list_content"
+        android:layout_width="33dp"
+        android:layout_height="38dp"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_weight="0.2"
+        android:gravity="center"
+        android:src="@drawable/map"
+        android:text="查看"
+        android:visibility="gone" />
+
+</LinearLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="2dp" >
+
+    <TextView
+        android:id="@+id/tower_check_item0"
+        style="@style/common_content_forlist"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_weight="0.5"
+        android:gravity="center|center_vertical"
+        android:text="检测项目" />
+
+    <CheckBox
+        android:id="@+id/tower_check_item1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+		android:layout_weight="0.2"
+        android:layout_marginRight="5dp"
+        android:button="@drawable/button_switch_selector"
+        android:gravity="left|center_vertical"
+        android:text="" />
+
+    <Spinner
+        android:id="@+id/tower_check_item2"
+        style="@style/common_spinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_weight="0.3"
+        android:entries="@array/defectLevel"
+        android:gravity="center|center_vertical" />
+
+    <EditText
+        android:id="@+id/tower_check_item3"
+        style="@style/common_content_forlist"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="left|center_vertical"
+        android:hint="缺陷内容" />
+  <ImageView
+            android:id="@+id/tower_check_item4"
+            android:layout_width="44dp"
+            android:layout_height="40dp"
+            android:layout_weight="0.1"
+            android:layout_gravity="right"
+            android:src="@drawable/takephoto1" />
+    
+    <FrameLayout
+        android:layout_width="44dp"
+        android:layout_height="40dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight="0.1"
+        android:gravity="left|center" >
+
+        <ImageView
+            android:id="@+id/tower_check_item5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:src="@drawable/bottom_bar_icon_me_normal" />
+
+        <TextView
+            android:id="@+id/imgCnt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="right|top"
+            android:text="0"
+            android:textColor="@color/black"/>
+    </FrameLayout>
+
+</LinearLayout>

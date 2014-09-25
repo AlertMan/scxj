@@ -424,7 +424,7 @@ public class BindCardActivity extends BaseActivity implements OnEPCsListener {
 			new Thread(new Runnable() {
 				@Override
 				public void run() {
-					boolean ret = NetAdapter.downloadPointDb(userId);
+					boolean ret = NetAdapter.downloadBindingInfo(userId);
 					if(ret){
 						handler.obtainMessage(REFRESH_SITE_LIST, "绑卡信息下载成功!")
 						.sendToTarget();
@@ -442,7 +442,7 @@ public class BindCardActivity extends BaseActivity implements OnEPCsListener {
 				public void run() {
 					byte[]  dbBytes = FileUtil.readFileByByte(pointDbPath);
 					
-					String ret = NetAdapter.updateBindingInfo(userId,Base64.encode(dbBytes));
+					String ret = NetAdapter.uploadBindingInfo(userId,Base64.encode(dbBytes));
 					if (StringUtils.isNull(ret)) {
 						handler.obtainMessage(MSG_SHOW_TOAST, "绑卡信息上传失败!").sendToTarget();
 						return;
@@ -451,7 +451,7 @@ public class BindCardActivity extends BaseActivity implements OnEPCsListener {
 						JSONObject jb = new JSONObject(ret);
 						if ("0".equals(jb.getString("resultCode"))) {
 							FileUtil.deleteFile(pointDbPath);
-							boolean downloadRet = NetAdapter.downloadPointDb(userId);
+							boolean downloadRet = NetAdapter.downloadBindingInfo(userId);
 							if(downloadRet){
 								handler.obtainMessage(REFRESH_SITE_LIST, "绑卡信息同步成功!")
 									.sendToTarget();

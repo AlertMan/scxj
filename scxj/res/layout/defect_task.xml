@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+<!-- 
+    <TextView
+        android:id="@+id/name"
+        style="@style/common_content_forlist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="编号" />
+ -->
+    <LinearLayout
+        android:id="@+id/BLQFDJL"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical" >
+
+        <View style="@style/list_item_seperator_layout" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="36dp"
+            android:orientation="horizontal" >
+
+            <View style="@style/list_item_cell_seperator_layout" />
+
+            <TextView
+                style="@style/common_list_title"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1.2"
+                android:textColor="@color/list_bg"
+                android:gravity="center"
+                android:text="编号" />
+
+            <View style="@style/list_item_cell_seperator_layout" />
+
+            <EditText
+                android:id="@+id/defect_task_id"
+                style="@style/common_content_forlist"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:editable="false"
+                 android:background="@android:drawable/editbox_background"
+                android:gravity="center" />
+
+            <View style="@style/list_item_cell_seperator_layout" />
+
+            <TextView
+                style="@style/common_list_title"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:textColor="@color/list_bg"
+                android:gravity="center"
+                android:text="班组" />
+
+            <View style="@style/list_item_cell_seperator_layout" />
+
+            <EditText
+                android:id="@+id/classname"
+                style="@style/common_content_forlist"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                 android:background="@android:drawable/editbox_background"
+                android:gravity="center" />
+
+            <View style="@style/list_item_cell_seperator_layout" />
+
+            <TextView
+                style="@style/common_list_title"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:textColor="@color/list_bg"
+                android:gravity="center"
+                android:visibility="invisible" />
+
+            <View style="@style/list_item_cell_seperator_layout" android:visibility="invisible"/>
+
+            <EditText
+                android:id="@+id/stock_list_header_code"
+                style="@style/common_content_forlist"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center"
+                android:visibility="invisible" />
+
+            <View style="@style/list_item_cell_seperator_layout" />
+        </LinearLayout>
+
+        <View style="@style/list_item_seperator_layout" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="36dp"
+            android:orientation="horizontal" >
+
+            <View style="@style/list_item_cell_seperator_layout" />
+
+            <TextView
+                style="@style/common_list_title"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1.2"
+                android:textColor="@color/list_bg"
+                android:gravity="center"
+                android:text="发起班组" />
+
+            <View style="@style/list_item_cell_seperator_layout" />
+
+            <EditText
+                android:id="@+id/start_class_name"
+                style="@style/common_content_forlist"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                 android:background="@android:drawable/editbox_background"
+                android:editable="false"
+                android:gravity="center" />
+
+            <View style="@style/list_item_cell_seperator_layout" />
+
+            <TextView
+                style="@style/common_list_title"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:textColor="@color/list_bg"
+                android:gravity="center"
+                android:text="制单人" />
+
+            <View style="@style/list_item_cell_seperator_layout" />
+
+            <EditText
+                android:id="@+id/sign_person"
+                style="@style/common_content_forlist"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                 android:background="@android:drawable/editbox_background"
+                android:editable="false"
+                android:gravity="center" />
+
+            <View style="@style/list_item_cell_seperator_layout" />
+
+            <TextView
+                style="@style/common_list_title"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:textColor="@color/list_bg"
+                android:gravity="center"
+                android:text="发现时间" />
+
+            <View style="@style/list_item_cell_seperator_layout" />
+
+            <EditText
+                android:id="@+id/find_time"
+                style="@style/common_content_forlist"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                 android:background="@android:drawable/editbox_background"
+                android:editable="false"
+                android:gravity="center" />
+
+            <View style="@style/list_item_cell_seperator_layout" />
+        </LinearLayout>
+
+        <View style="@style/list_item_seperator_layout" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="36dp"
+            android:orientation="horizontal" >
+
+            <View style="@style/list_item_cell_seperator_layout" />
+
+            <TextView
+                style="@style/common_list_title"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1.2"
+                android:textColor="@color/list_bg"
+                android:gravity="center"
+                android:text="缺陷、隐患类别" />
+
+            <View style="@style/list_item_cell_seperator_layout" />
+
+            <EditText
+                android:id="@+id/defect_type"
+                style="@style/common_content_forlist"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                 android:background="@android:drawable/editbox_background"
+                android:editable="false"
+                android:gravity="center" />
+
+            <View style="@style/list_item_cell_seperator_layout" />
+
+            <TextView
+                android:id="@+id/stock_list_header_code"
+                style="@style/common_list_title"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:textColor="@color/list_bg"
+                android:gravity="center"
+                android:text="处理期限" />
+
+            <View style="@style/list_item_cell_seperator_layout" />
+
+            <EditText
+                android:id="@+id/finish_time"
+                style="@style/common_content_forlist"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                 android:background="@android:drawable/editbox_background"
+                android:editable="false"
+                android:gravity="center" />
+
+            <View style="@style/list_item_cell_seperator_layout" />
+
+            <TextView
+                android:id="@+id/stock_list_header_code"
+                style="@style/common_list_title"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:textColor="@color/list_bg"
+                android:gravity="center"
+                android:text="发现时间" 
+                
+                android:visibility="invisible"/>
+
+            <View style="@style/list_item_cell_seperator_layout" android:visibility="invisible"/>
+
+            <EditText
+                android:id="@+id/stock_list_header_code"
+                style="@style/common_content_forlist"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center" android:visibility="invisible"/>
+
+            <View style="@style/list_item_cell_seperator_layout" />
+        </LinearLayout>
+
+        <View style="@style/list_item_seperator_layout" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="46dp"
+            android:orientation="horizontal" >
+
+            <View style="@style/list_item_cell_seperator_layout" />
+
+            <TextView
+                style="@style/common_list_title"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1.1"
+                android:textColor="@color/list_bg"
+                android:gravity="center"
+                android:text="缺陷、隐患描述" />
+            <EditText
+                android:id="@+id/defect_desc"
+                style="@style/common_content_forlist"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="5.3"
+                android:inputType="textMultiLine|text"
+                android:background="@android:drawable/editbox_background"
+                android:gravity="left|top" />
+
+            <View style="@style/list_item_cell_seperator_layout" />
+        </LinearLayout>
+
+        <View style="@style/list_item_seperator_layout" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="36dp"
+            android:orientation="horizontal" >
+
+            <View style="@style/list_item_cell_seperator_layout" />
+
+            <TextView
+                style="@style/common_list_title"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1.2"
+                android:textColor="@color/list_bg"
+                android:gravity="center"
+                android:text="消缺隐患、缺陷班组" />
+
+            <View style="@style/list_item_cell_seperator_layout" />
+
+            <EditText
+                android:id="@+id/action_class_name"
+                style="@style/common_content_forlist"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                 android:background="@android:drawable/editbox_background"
+                 android:editable="false"
+                android:gravity="center" />
+
+            <View style="@style/list_item_cell_seperator_layout" />
+
+            <TextView
+                android:id="@+id/stock_list_header_code"
+                style="@style/common_list_title"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:textColor="@color/list_bg"
+                android:gravity="center"
+                android:text="领单人" />
+
+            <View style="@style/list_item_cell_seperator_layout" />
+
+            <EditText
+                android:id="@+id/login_user_name"
+                style="@style/common_content_forlist"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                 android:background="@android:drawable/editbox_background"
+                android:editable="false"
+                android:gravity="center" />
+
+            <View style="@style/list_item_cell_seperator_layout" />
+
+            <TextView
+                android:id="@+id/stock_list_header_code"
+                style="@style/common_list_title"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:textColor="@color/list_bg"
+                android:gravity="center"
+                android:text="领单时间" />
+
+            <View style="@style/list_item_cell_seperator_layout" />
+
+            <EditText
+                android:id="@+id/download_time"
+                style="@style/common_content_forlist"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                 android:background="@android:drawable/editbox_background"
+                android:editable="false"
+                android:gravity="center" />
+
+            <View style="@style/list_item_cell_seperator_layout" />
+        </LinearLayout>
+
+        <View style="@style/list_item_seperator_layout" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="46dp"
+            android:orientation="horizontal" >
+
+            <View style="@style/list_item_cell_seperator_layout" />
+
+            <TextView
+                style="@style/common_list_title"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1.1"
+                android:textColor="@color/list_bg"
+                android:gravity="center"
+                android:text="消缺隐患、缺陷情况" />
+
+            <!-- <View style="@style/list_item_cell_seperator_layout" /> -->
+
+            <EditText
+                android:id="@+id/retdesc"
+                style="@style/common_content_forlist"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="5.3"
+                android:inputType="textMultiLine|text"
+                android:background="@android:drawable/editbox_background"
+                android:gravity="left|top" />
+
+            <View style="@style/list_item_cell_seperator_layout" />
+        </LinearLayout>
+
+        <View style="@style/list_item_seperator_layout" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="36dp"
+            android:orientation="horizontal" >
+
+            <View style="@style/list_item_cell_seperator_layout" />
+
+            <TextView
+                style="@style/common_list_title"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1.2"
+                android:textColor="@color/list_bg"
+                android:gravity="center"
+                android:text="消除隐患、缺陷负责人" />
+
+            <View style="@style/list_item_cell_seperator_layout" />
+
+            <EditText
+                android:id="@+id/login_user"
+                style="@style/common_content_forlist"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                 android:background="@android:drawable/editbox_background"
+                android:editable="false"
+                android:gravity="center" />
+
+            <View style="@style/list_item_cell_seperator_layout" />
+
+            <TextView
+                style="@style/common_list_title"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:textColor="@color/list_bg"
+                android:gravity="center"
+                android:text="消除隐患、缺陷时间" />
+
+            <View style="@style/list_item_cell_seperator_layout" />
+
+            <EditText
+                android:id="@+id/sucess_time"
+                style="@style/common_content_forlist"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                 android:background="@android:drawable/editbox_background"
+                 android:editable="false"
+                android:gravity="center" />
+
+            <View style="@style/list_item_cell_seperator_layout" />
+
+            <TextView
+                style="@style/common_list_title"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:textColor="@color/list_bg"
+                android:gravity="center"
+                android:text="动作次数" 
+                android:visibility="invisible"/>
+
+            <View style="@style/list_item_cell_seperator_layout"  android:visibility="invisible"/>
+
+            <EditText
+                android:id="@+id/stock_list_header_code"
+                style="@style/common_content_forlist"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center"  android:visibility="invisible" />
+
+            <View style="@style/list_item_cell_seperator_layout" />
+        </LinearLayout>
+
+        <View style="@style/list_item_seperator_layout" />
+    </LinearLayout>
+
+</LinearLayout>

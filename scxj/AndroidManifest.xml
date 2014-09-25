@@ -34,6 +34,13 @@
             android:icon="@drawable/product_logo"
             >
         </activity>
+        
+         <activity
+            android:name="com.scxj.main.MainChoiceActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/Theme.SCXJ"
+            >
+        </activity>
        
 	<activity android:name="com.scxj.service.GpsAlertActivity"
 	    	android:screenOrientation="landscape"
