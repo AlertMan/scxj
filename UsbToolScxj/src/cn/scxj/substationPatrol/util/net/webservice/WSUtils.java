@@ -13,6 +13,8 @@ import org.ksoap2.serialization.SoapObject;
 import org.ksoap2.serialization.SoapSerializationEnvelope;
 import org.xmlpull.v1.XmlPullParserException;
 
+import com.scxj.utils.net.WSUtils;
+
 /**
  * webservice 访问
  */
@@ -420,7 +422,50 @@ public class WSUtils {
 		return returnStatus;
 	}
 
+	/**
+	 * 下载巡视卡信息库
+	 * 接口需要判断是否有权限下载绑卡数据库
+	 * @param userName
+	 * @return
+	 */
+	public static String downLoadPatrolPointDB(String userName){
+		String methodName = "downloadPointsInfo";
+		Map<String,Object> params = new LinkedHashMap<String,Object>();
+		params.put("userName", userName);
+		SoapObject results = (SoapObject)WSUtils.callWS(nameSpace, methodName, params, wsdl, timeout);
+		String returnStatus = "";
+		try {
+			if(results != null){
+				returnStatus =   results.getProperty("out").toString();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return returnStatus;
+	}
 	
-
+	public static String uploadBindingInfo(String userName, String encode) {
+		String methodName = "uploadBindingInfo";
+		List<PropertyInfo> params = new ArrayList<PropertyInfo>();
+		PropertyInfo p = new PropertyInfo();
+		p.setName("userName");
+		p.setValue(userName);
+		params.add(p);
+		
+		PropertyInfo p1 = new PropertyInfo();
+		p1.setName("pointFile");
+		p1.setValue(encode);
+		params.add(p1);
+		
+		
+		SoapObject results = WSUtils.upload(nameSpace, methodName, params, wsdl,timeout);
+		String returnStatus = "";
+		try {
+			returnStatus =   results.getProperty("out").toString();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return returnStatus;
+	}
 
 }

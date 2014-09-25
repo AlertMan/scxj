@@ -122,6 +122,8 @@ public class MessageManager extends Thread{
             		}else if ("downloadTaskInfo".equals(methodName)) {
                 		
                 		downloadTaskInfo((String)map.get("nameSpace"), (String)map.get("wsdl"),(String)map.get("userName"));
+                	}else if ("downloadBindingInfo".equals(methodName)) {//下载绑卡信息
+                		downloadBindingInfo((String)map.get("nameSpace"), (String)map.get("wsdl"),(String)map.get("userName"));
                 	}else if ("downloadTaskDefectInfo".equals(methodName)) {
                 		downloadTaskDefectInfo((String)map.get("nameSpace"), (String)map.get("wsdl"),(String)map.get("userName"));
             		}else if ("downloadAssetInfo".equals(methodName)) {
@@ -132,6 +134,8 @@ public class MessageManager extends Thread{
             			uploadTaskDefectInfo((String)map.get("nameSpace"),(String)map.get("wsdl"),(String)map.get("userName"),(String)map.get("taskdefectid"),(String)map.get("fileData"));
             		}else if("uploadAttachInfo".equals(methodName)){//上传附件
             			uploadAttachInfo((String)map.get("nameSpace"),(String)map.get("wsdl"),(String)map.get("taskType"),(String)map.get("taskId"),(String)map.get("attachId"),(String)map.get("assetId"),(String)map.get("fileData"));
+            		}else if("uploadBindingInfo".equals(methodName)){//上传绑卡信息
+            			uploadBindingInfo((String)map.get("nameSpace"),(String)map.get("wsdl"),(String)map.get("userName"),(String)map.get("pointFile"));
             		}else if("updateUserInfo".equals(methodName)){//修改用户信息
             			updateUserInfo((String)map.get("nameSpace"),(String)map.get("wsdl"),(String)map.get("userName"),(String)map.get("password"),(String)map.get("sex"),(String)map.get("phone"));
             		}else if("updateTaskStatus".equals(methodName)){
@@ -158,6 +162,7 @@ public class MessageManager extends Thread{
     		stopadb();
         }  
 	}
+
 
 
 	/**
@@ -221,6 +226,25 @@ public class MessageManager extends Thread{
 			Utils.sendToSocket(out, "".getBytes("UTF-8"));
 		}
 }
+	
+	/**
+	 * 下载绑卡信息
+	 * @param nameSpace
+	 * @param wsdl
+	 * @param userName
+	 */
+	private void downloadBindingInfo(String nameSpace, String wsdl,
+			String userName) throws Exception {
+		try {
+			WSUtils.nameSpace = nameSpace;
+			WSUtils.wsdl = wsdl;
+			String taskdata = WSUtils.downloadBindingInfo(userName);
+			Utils.sendToSocket(out, taskdata.getBytes("UTF-8"));
+		} catch (Exception e) {
+			Logger.warn("连接后台服务器异常：" + e.getMessage());
+			Utils.sendToSocket(out, "".getBytes("UTF-8"));
+		}
+	}
 
 	/**
 	 * 获取用户信息库
@@ -273,6 +297,33 @@ public class MessageManager extends Thread{
 			WSUtils.nameSpace = nameSpace;
 			WSUtils.wsdl = wsdl;
 			String result = WSUtils.uploadAttachInfo(taskType, taskId, attachId,assetId,data);
+			Logger.debug("后台返回：" + result);
+			if (result == null) {
+				result = "";
+			}
+			Utils.sendToSocket(out, result.getBytes("UTF-8"));
+		} catch (Exception e) {
+			Logger.warn("连接后台服务器异常：" + e.getMessage());
+			Utils.sendToSocket(out, "".getBytes("UTF-8"));
+		}
+}
+	
+	
+	/**
+	 * 上传绑卡
+	 * @param nameSpace
+	 * @param wsdl
+	 * @param taskType
+	 * @param taskId
+	 * @param attachId
+	 * @param data
+	 * @throws Exception
+	 */
+	private void uploadBindingInfo(String nameSpace, String wsdl,String userName,String data)throws Exception {
+		try {
+			WSUtils.nameSpace = nameSpace;
+			WSUtils.wsdl = wsdl;
+			String result = WSUtils.uploadBindingInfo(userName,data);
 			Logger.debug("后台返回：" + result);
 			if (result == null) {
 				result = "";

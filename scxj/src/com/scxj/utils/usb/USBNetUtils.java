@@ -454,7 +454,7 @@ public class USBNetUtils {
 		if(isOnUSBNet()){
 			Map<String, Object> map = new HashMap<String, Object>();
 			map.put("nameSpace", WSUtils.nameSpace);
-			map.put("methodName", "uploadAttachInfo");
+			map.put("methodName", "uploadBindingInfo");
 			map.put("wsdl", WSUtils.wsdl);
 			map.put("currTimeOut", "30000");
 			map.put("userName", userName);

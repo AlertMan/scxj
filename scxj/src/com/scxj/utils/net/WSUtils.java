@@ -448,7 +448,7 @@ public class WSUtils {
 	}
 
 	public static String uploadBindingInfo(String userName, String encode) {
-		String methodName = "uploadTaskDefectInfo";
+		String methodName = "uploadBindingInfo";
 		List<PropertyInfo> params = new ArrayList<PropertyInfo>();
 		PropertyInfo p = new PropertyInfo();
 		p.setName("userName");
